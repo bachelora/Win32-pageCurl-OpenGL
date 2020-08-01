@@ -13,3 +13,18 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+
+
+#define GLEW_STATIC
+#include"GL/glew.h"
+#include<GL/GL.h>
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
+
+#ifdef _DEBUG
+extern void OutPutDebugStringF(const char* format, ...);
+#define NSLog   OutPutDebugStringF
+#else
+#define NSLog
+#endif
