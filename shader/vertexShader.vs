@@ -35,7 +35,7 @@ void main()
         pos = topPoint + moreThanHalfCir * vec3(direction.xy,0);
       }else{
 
-        float angle = PI - distance / (2*direction.z);
+        float angle = PI - distance / direction.z;
         float h = distance - sin(angle)*direction.z;
         float z = direction.z + cos(angle)*direction.z;
         vec3 vD = pos + h * vec3(direction.xy,0);

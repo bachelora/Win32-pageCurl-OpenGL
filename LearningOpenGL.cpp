@@ -205,7 +205,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         WORD y = HIWORD(lParam);
 
         glm::vec2 direction(x-_x,_y-y);
-        openGl.direction = glm::vec3(glm::normalize(direction),2);
+        openGl.direction = glm::vec3(glm::normalize(direction),5);
 
         if (direction.x> 0 && direction.y<=0){
             openGl.point = glm::vec2(-openGl._config.x/2, openGl._config.y / 2) + 0.50f * direction;
